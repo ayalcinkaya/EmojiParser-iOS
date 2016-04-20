@@ -33,13 +33,13 @@ let tables:[String:String] = [
 
 extension UITextView{
     
+    //Parse the string of the UITextView at the very end and get the parsed string
     func postParseStringForEmoji() -> String{
         let indexes = Array(Set(tables.keys.map({ (key) -> Int in
             return key.characters.count
         }))).sort { (a, b) -> Bool in
             return a > b
         }
-        "fdsq".replace
         
         var k = 0
         var res = self.text
@@ -61,6 +61,7 @@ extension UITextView{
         return res
     }
     
+    //Use this one just to parse the few last characters every time there is a new one
     func lastParseStringForEmoji() -> String {
         let indexes = Array(Set(tables.keys.map({ (key) -> Int in
             return key.characters.count
