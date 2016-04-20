@@ -39,6 +39,7 @@ extension UITextView{
         }))).sort { (a, b) -> Bool in
             return a > b
         }
+        "fdsq".replace
         
         var k = 0
         var res = self.text

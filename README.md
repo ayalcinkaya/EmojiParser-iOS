@@ -1,6 +1,6 @@
 # EmojiParser-iOS
 
-EmojiParser is simple Swift (2.2) extension to UITextView class. It adds two function allowing you to parse the TextView in order to replace Emoji characters such like ":-)" by "😊".
+EmojiParser is simple Swift (2.2) extension to UITextView class. It adds two functions allowing you to parse an UITextView in order to replace Emoji characters such as ":-)" wich "😊".
 
 ![Demo](img/demo.gif)
 
@@ -34,13 +34,13 @@ func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, repl
 }
 ```
 
-Hence, when a new character is added to the ```textView``` the method will be called and you'll be parsing only the lastest characters. The parsing function will called either after a ";" or a "." or whatever characters included in the ```customTriggerPonctuationSet```string.
+Hence, when a new character is added to the ```textView``` the method will be called and you'll be parsing only the lastest characters. The parsing function will called either after a ";" or a "." or after any characters included in the ```customTriggerPonctuationSet``` string.
 
 If you want to parse at the very end you can call ```postParseStringForEmoji``` in the ```didEndEditing``` delegate method.
 
-### Table
+### Dictionnary
 
-The parser use a table to associate characters to Emoji. If you want to, you can add your own (characters, emoji) tuple and the algorithm will still work. Here is a current table (based on Facebook Emoji) :
+The parser use a dictionnary to match characters to Emoji. If you want to, you can add your own (characters, emoji) tuple and the algorithm will work anyway. Here is the current dictionnary (based on Facebook Emoji) :
 
 ```swift
 let tables:[String:String] = [
@@ -68,4 +68,4 @@ let tables:[String:String] = [
 
 ## Example
 
-I've provided a project example. The extension is in FTEmojiParser. The project is a simple UITextView. When you type in your text will be transformed in "text with Emoji".
+I've provided a project sample. The extension is in the ```FTEmojiParser``` file. The project is a simple UITextView. When you type in your text will be transformed in "text with Emoji".
