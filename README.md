@@ -38,7 +38,7 @@ Hence, when a new character is added to the ```textView``` the method will be ca
 
 If you want to parse at the very end you can call ```postParseStringForEmoji``` in the ```didEndEditing``` delegate method.
 
-### Dictionnary
+### Dictionary
 
 The parser use a dictionnary to match characters to Emoji. If you want to, you can add your own (characters, emoji) tuple and the algorithm will work anyway. Here is the current dictionnary (based on Facebook Emoji) :
 
